@@ -1,0 +1,61 @@
+<!--start content-->
+<main class="page-content">
+    <!--breadcrumb-->
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <div class="breadcrumb-title pe-3">Notification</div>
+        <div class="ps-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 p-0">
+                    <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Ajouter Notification</li>
+                </ol>
+            </nav>
+        </div>
+
+    </div>
+    <!--end breadcrumb-->
+    <div class="card">
+        <div class="card-body">
+
+            <form class="row g-3" (ngSubmit)="insertNotification()">
+                
+                <div class="col-6">
+                    <label class="form-label">Date:</label>
+                    <input type="date" class="form-control" name="date" [(ngModel)]="notification.date">
+                </div>
+                <br>
+                
+                <div class="col-6">
+                    <label class="form-label">Message:</label>
+                    <input type="text" class="form-control" name="description" [(ngModel)]="notification.description">
+                </div>
+                <br>
+                <br>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-light px-2 confirmer"><i
+                        class="bx bx-check-circle mr-1"></i>Confirmer</button>
+                    <button type="submit" class="btn btn-light px-2 cancel"><span class="iconify"
+                        data-icon="icomoon-free:cancel-circle"></span>Cancel</button>
+                  </div>
+                
+                
+            
+
+
+            
+
+
+
+            </form>
+
+
+
+
+
+
+        </div>
+
+    </div>
+</main>
+<app-navbar></app-navbar>

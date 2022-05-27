@@ -1,0 +1,110 @@
+<body>
+
+
+    <!--start wrapper-->
+    <div class="wrapper">
+      <!--start top header-->
+      <header class="top-header">
+        <nav class="navbar navbar-expand gap-3">
+          <div class="mobile-toggle-icon fs-3">
+            <i class="bi bi-list"></i>
+          </div>
+         
+          <div class="top-navbar-right ms-auto">
+            <ul class="navbar-nav align-items-center">
+              
+              <li class="nav-item dropdown dropdown-user-setting">
+                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                  <div class="user-setting d-flex align-items-center">
+                    <img src="https://via.placeholder.com/110X110" class="user-img" alt="">
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/110X110" alt="" class="rounded-circle" width="54"
+                          height="54">
+                        <div class="ms-3">
+                          <h6 class="mb-0 dropdown-user-name">Jhon Deo</h6>
+                          <small class="mb-0 dropdown-user-designation text-secondary">HR Manager</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="user-profile.html">
+                      <div class="d-flex align-items-center">
+                        <div class=""><i class="bi bi-person-fill"></i></div>
+                        <div class="ms-3"><span>Profile</span></div>
+                      </div>
+                    </a>
+                  </li>
+                 
+                 
+                 
+                  
+                 
+                  <li>
+                    <a class="dropdown-item" href="authentication-signup-with-header-footer.html">
+                      <div class="d-flex align-items-center">
+                        <div class=""><i class="bi bi-lock-fill"></i></div>
+                        <div class="ms-3"><button type="submit" (click) = "logout()"
+                            >Logout</button></div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+              
+              
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--end top header-->
+      <!--start sidebar -->
+      <aside class="sidebar-wrapper" data-simplebar="true">
+        <div class="sidebar-header">
+          <div>
+            <img src="../assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+          </div>
+          <div>
+            <h4 class="logo-text">Nutrihealth</h4>
+          </div>
+          <div class="toggle-icon ms-auto"> <i class="bi bi-list"></i>
+          </div>
+        </div>
+        <!--navigation-->
+        <ul class="metismenu" id="menu">
+         
+          
+          <li>
+              <a routerLink="/listepatientsassistante">
+                <div class="parent-icon"><i class="bi bi-calendar-check-fill"></i>
+                </div>
+                <div class="menu-title">Patients</div>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/calendarassistante">
+                <div class="parent-icon"><i class="bi bi-calendar-check-fill"></i>
+                </div>
+                <div class="menu-title">Calendrier</div>
+              </a>
+            </li>
+           
+           
+  
+  
+  
+        </ul>
+        <!--end navigation-->
+      </aside>
+      <!--end sidebar -->
+      <router-outlet></router-outlet>
+

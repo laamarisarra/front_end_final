@@ -1,0 +1,132 @@
+<!--start content-->
+<main class="page-content">
+    <!--breadcrumb-->
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <div class="breadcrumb-title pe-3">Fiche</div>
+        <div class="ps-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 p-0">
+                    <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Fiche Aliment</li>
+                </ol>
+            </nav>
+        </div>
+
+    </div>
+    <!--end breadcrumb-->
+
+    <div class="card">
+        <div class="card-body">
+            <br>
+            <br>
+            <br>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xxl-4">
+                
+                <div class="col">
+                    
+                        <button  class="card radius-10 bg-orange" data-bs-toggle="modal"
+                        data-bs-target="#add">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center">
+                          <div class="">
+                            <p class="mb-1 text-white">Morning Meal</p>
+                            <h4 class="mb-0 text-white">09:00H</h4>
+                          </div>
+                          <div class="ms-auto widget-icon bg-white-1 text-white">
+                            <i class="bi bi-sun"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+
+
+                    
+                   </div>
+               </div>
+               <!-- ADD Modal -->
+            <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add a morning Meal</h5>
+
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="border p-3 rounded">
+
+
+                                        <form  class="row g-3">
+                                            <div class="col-6">
+                                                <label class="form-label">meal</label>
+                                                <input type="text" class="form-control" value="">
+                                             </div>
+                                             
+                                           
+
+
+                         
+
+
+
+
+
+                 
+                                           <div class="row mt-3 ">
+                 
+                                             <div class="col-6">
+                                               <button type="submit" class="btn btn-light px-2 confirmer"><i
+                                                   class="bx bx-check-circle mr-1"></i>Confirmer</button>
+                                               <button type="submit" class="btn btn-light px-2 cancel"><span class="iconify"
+                                                   data-icon="icomoon-free:cancel-circle"></span>Cancel</button>
+                                             </div>
+                                           </div>
+                                       
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                                       </form>
+
+                                    </div>
+                                </div>
+                                <!--end row-->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--end of ADD model-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+    </div>
+    <app-navbar></app-navbar>
+

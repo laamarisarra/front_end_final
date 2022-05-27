@@ -1,0 +1,332 @@
+<!--start content-->
+<main class="page-content">
+    <!--breadcrumb-->
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+        <div class="breadcrumb-title pe-3">Patient</div>
+        <div class="ps-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 p-0">
+                    <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">liste des patinets</li>
+                </ol>
+            </nav>
+        </div>
+
+    </div>
+    <!--end breadcrumb-->
+
+    <div class="card">
+        <div class="card-body">
+
+            <div class="ms-auto ">
+                <div class="btn-group ">
+
+                    <button type="button" class="btn btn-light addbutton " data-bs-toggle="modal"
+                        data-bs-target="#add">Ajouter</button>
+                    <button type="button" class="btn btn-light addbutton  bi bi-plus-circle " data-bs-toggle="modal"
+                        data-bs-target="#add">
+
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="table-responsive mt-3">
+                <table class="table align-middle">
+                    <thead class="table-secondary">
+                       
+                        
+
+
+
+
+
+                        <tr >
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Tel</th>
+                            <th>birth date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>                                                     
+                        <tr *ngFor="let pati of patients "> 
+                             
+
+                             <td>{{pati.id}}</td>                                   
+                            <td>{{pati.lastname}}</td>
+                                
+                            
+
+                            <td>{{pati.firstname}}</td>
+                            <td>{{pati.email}}</td>
+                            <td>{{pati.phone}}</td>
+                            
+                            <td>{{pati.birth}}</td>
+                            
+
+                            <td>
+
+                                <button type="button" class="btn btn-light btn-floating button"
+                                    data-mdb-ripple-color="dark" data-bs-toggle="modal" data-bs-target="#view">
+
+                                    <i class="bi bi-eye-fill icon"></i>
+                                </button>
+                                <!-- VIEW Modal -->
+                                <div class="modal fade" id="view" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Afficher un patient 
+                                                </h5>
+                                                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="">
+                                                    <form class="row g-3">
+                                                      <div class="card-header">
+                                                        <h6 class="mb-0">Contacte Information</h6>
+                                                      </div>
+                                                       <div class="col-6">
+                                                          <label class="form-label">Nom</label>
+                                                          <input type="text" class="form-control" value="Laamari">
+                                                       </div>
+                                                       <div class="col-6">
+                                                        <label class="form-label">Prénom</label>
+                                                        <input type="text" class="form-control" value="Sarra">
+                                                      </div>
+                                                      
+                                                        <div class="col-6">
+                                                          <label class="form-label">Adresse Email</label>
+                                                          <input type="text" class="form-control" value="laamari.sa99@gmail.com">
+                                                      </div>
+                      
+                                                      <div class="col-6">
+                                                          <label class="form-label">Tel</label>
+                                                          <input type="text" class="form-control" value="22943699">
+                                                      </div>
+                                                      <div class="col-6">
+                                                        <label class="form-label">Adresse</label>
+                                                        <input type="text" class="form-control" value="la petie ariana">
+                                                    </div>
+                                                     
+                                                    </form>
+                                                  </div>
+                                             </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-light cancel"
+                                                    data-bs-dismiss="modal">Fermer</button>
+
+                                            </div>
+                                        </div>
+                                    
+                                
+                                <!--end of view model-->
+                               
+
+
+
+
+
+                                <button type="button" class="btn btn-light btn-floating button" data-bs-toggle="modal"
+                                data-bs-target="#edit" >
+                                    <i class="bi bi-pencil-fill icon" ></i>
+                                </button>
+
+                                <!-- EDIT Modal -->
+                                <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Modifier un patient
+                                                </h5>
+                                                
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="border p-3 rounded">
+                                                            <form class="row g-3">
+
+
+                         
+                                                                <div class="col-6">
+                                                                   <label class="form-label">Nom</label>
+                                                                   <input type="text" class="form-control" value="Laamari">
+                                                                </div>
+                                                                <div class="col-6">
+                                                                 <label class="form-label">Prénom</label>
+                                                                 <input type="text" class="form-control" value="Sarra">
+                                                               </div>
+                                                               
+                                                                 <div class="col-6">
+                                                                   <label class="form-label">Adresse Email</label>
+                                                                   <input type="text" class="form-control" value="laamari.sa99@gmail.com">
+                                                               </div>
+                                     
+                                                               <div class="col-6">
+                                                                   <label class="form-label">Tel</label>
+                                                                   <input type="text" class="form-control" value="22943699">
+                                                               </div>
+                                                               <div class="col-6">
+                                                                 <label class="form-label">Adresse</label>
+                                                                 <input type="text" class="form-control" value="la petie ariana">
+                                                             </div>
+                                     
+                                                               <div class="row mt-3 ">
+                                     
+                                                                 <div class="col-6">
+                                                                   <button type="submit" class="btn btn-light px-2 confirmer"><i
+                                                                       class="bx bx-check-circle mr-1"></i>Confirmer</button>
+                                                                   <button type="submit" class="btn btn-light px-2 cancel"><span class="iconify"
+                                                                       data-icon="icomoon-free:cancel-circle"></span>Cancel</button>
+                                                                 </div>
+                                                               </div>
+                                                           
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                                           </form>
+
+
+                                                           
+
+                                                        </div>
+                                                    </div>
+                                                    <!--end row-->
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--end of EDIT model-->
+
+                                <button type="button" class="btn btn-light btn-floating button" >
+                                    <i class="bi bi-trash-fill icon" (click)=" deletepatiadData(pati.id)"  ></i>
+                                </button>
+
+                            </td>
+                        </tr>
+
+
+                       
+
+                    </tbody>
+
+                </table>
+            </div>
+            <!-- ADD Modal -->
+            <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ajouter un patient</h5>
+
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="border p-3 rounded">
+
+
+                                        <form (ngSubmit)="insertpatiadData()" class="row g-3">
+
+
+                         
+                                            <div class="col-6">
+                                               <label class="form-label">Nom</label>
+                                               <input type="text" class="form-control"  name="firstname" [(ngModel)]="patient.firstname">
+                                            </div>
+                                            <div class="col-6">
+                                             <label class="form-label">Prénom</label>
+                                             <input type="text" class="form-control"  name="lastname" [(ngModel)]="patient.lastname">
+                                           </div>
+                                           
+                                             <div class="col-6">
+                                               <label class="form-label">Adresse Email</label>
+                                               <input type="text" class="form-control"  name="email" [(ngModel)]="patient.email">
+                                           </div>
+                 
+                                           <div class="col-6">
+                                               <label class="form-label">Tel</label>
+                                               <input type="text" class="form-control" name="phone" [(ngModel)]="patient.phone">
+                                           </div>
+                                           <!-- <div class="col-6">
+                                             <label class="form-label">Adresse</label>
+                                             <input type="text" class="form-control" value="la petie ariana">
+                                         </div> -->
+                 
+                                           <div class="row mt-3 ">
+                 
+                                             <div class="col-6">
+                                               <button type="submit" class="btn btn-light px-2 confirmer"><i
+                                                   class="bx bx-check-circle mr-1"></i>Confirmer</button>
+                                               <button type="submit" class="btn btn-light px-2 cancel"><span class="iconify"
+                                                   data-icon="icomoon-free:cancel-circle"></span>Cancel</button>
+                                             </div>
+                                           </div>
+                                       
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                                       </form>
+
+                                    </div>
+                                </div>
+                                <!--end row-->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--end of ADD model-->
+
+
+
+
+
+            </div>
+
+
+            <nav aria-label="Page navigation example ">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="javascript:;">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="javascript:;javascript:;">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:;">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:;">3</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:;">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</main>
+<app-admindashboard></app-admindashboard>
+
